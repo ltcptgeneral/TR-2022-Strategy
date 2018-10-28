@@ -6,6 +6,53 @@ import csv
 import random
 import functools
 
+class objectives:
+    
+    c_names = []
+    c_ids = []
+    c_pos = []
+    c_effects = []
+
+    def debug(self):
+        print("objectives has atributes names, ids, positions, and effects.")
+        return [c_names, c_ids, c_pos, c_effects]
+    
+    def __init__ (self, names, ids, pos, effects):
+        c_names = names
+        c_ids = ids
+        c_pos = pos
+        c_effects = effects
+        return None
+    
+    def append(self, n_name, n_id, n_pos, n_effect):
+        c_names.append(n_name)
+        c_ids.append(n_id)
+        c_pos.append(n_pos)
+        c_effects(n_effect)
+        return None
+    
+    def edit(self, search_id, n_name, n_id, n_pos, n_effect):
+        position = 0
+        for i in c_ids:
+            if c_ids[i] = search:
+                position = i
+        c_name[position] = n_name
+
+        if n_id != "null":
+            c_id[position] = n_id
+
+        c_pos[position] = n_pos
+        c_effect[position] = n_effect
+        return None
+    
+    def search(self, search):
+        position = 0
+        for i in c_ids:
+            if c_ids[i] = search:
+                position = i
+
+        return [c_names[position], c_ids[position], c_pos[position], c_effects[position]]
+
 def load_csv(filepath):
     with open(filepath, newline = '') as csvfile:
         file_array = list(csv.reader(csvfile))
