@@ -13,10 +13,11 @@ def load_csv(filepath):
 
 def basic_stats(data, mode, arg): # data=array, mode = [0:1_basic_stats, 1:c_basic_stats, 2:r_basic_stats], arg for mode 1 or mode 2 for column or row
 
+    if mode == 'debug':
+        out = "basic_stats requires 3 args: data, mode, arg; where data is data to be analyzed, mode is an int from 0 - 2 depending on type of analysis (by column or by row) and is only applicable to 2d arrays (for 1d arrays use mode 1), and arg is row/column number for mode 1 or mode 2; function returns: [mean, median, mode, stdev, variance]"
+        return out
+
     if mode == 0:
-        if data == 'debug':
-            out = ['mean', 'median', 'mode', 'standard deviation', 'variance']
-            return out
     
         mean = statistics.mean(data)
         median = statistics.median(data)
@@ -32,9 +33,6 @@ def basic_stats(data, mode, arg): # data=array, mode = [0:1_basic_stats, 1:c_bas
         return out
     
     elif mode == 1:
-        if data == 'debug':
-            out = ['mean', 'median', 'mode', 'standard deviation', 'variance']
-            return out
 
         c_data = []
         c_data_sorted = []
@@ -56,9 +54,6 @@ def basic_stats(data, mode, arg): # data=array, mode = [0:1_basic_stats, 1:c_bas
         return out
 
     elif mode == 2:
-        if data == 'debug':
-            out = ['mean', 'median', 'mode', 'standard deviation', 'variance']
-            return out
 
         r_data = []
 
