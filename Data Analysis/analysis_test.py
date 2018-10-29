@@ -6,3 +6,5 @@ print(analysis.basic_stats(data, 1, 0))
 print(analysis.basic_stats(data, 2, 0))
 print(analysis.z_score(10, analysis.basic_stats(data, 1, 0)[0],analysis.basic_stats(data, 1, 0)[3]))
 print(analysis.histo_analysis(data[0]))
+
+x = analysis.objectives(["switch", "scale", "climb"], [0,1,2], [[0,0],[1,1],[2,0]], ["0,1", "1,1", "0,5"])

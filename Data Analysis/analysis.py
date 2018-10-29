@@ -14,7 +14,7 @@ class objectives:
     c_effects = []
 
     def debug(self):
-        print("objectives has atributes names, ids, positions, and effects.")
+        print("objectives has atributes names, ids, positions, and effects. __init__ takes self, 1d array of names, 1d array of ids, 2d array of position, 1d array of effects.")
         return [c_names, c_ids, c_pos, c_effects]
     
     def __init__ (self, names, ids, pos, effects):
@@ -34,7 +34,7 @@ class objectives:
     def edit(self, search_id, n_name, n_id, n_pos, n_effect):
         position = 0
         for i in c_ids:
-            if c_ids[i] = search:
+            if c_ids[i] == search:
                 position = i
         c_name[position] = n_name
 
@@ -48,7 +48,7 @@ class objectives:
     def search(self, search):
         position = 0
         for i in c_ids:
-            if c_ids[i] = search:
+            if c_ids[i] == search:
                 position = i
 
         return [c_names[position], c_ids[position], c_pos[position], c_effects[position]]
