@@ -187,6 +187,24 @@ def z_score(point, mean, stdev):
     score = (point - mean)/stdev
     return score
 
+def stdev_z_split(mean, stdev, delta, low_bound, high_bound):
+
+    z_split = []
+
+    i = low_bound
+
+    while True:
+
+        z_split.append(float((1 / (stdev * math.sqrt(2 * math.pi))) * math.e ** (-0.5 * (((i - mean) / stdev) ** 2))))
+
+        i = i + delta
+
+        if i > high_bound:
+
+            break
+
+    return z_split
+
 def histo_analysis(hist_data): #depreciated
 
     if hist_data == 'debug':
@@ -241,7 +259,7 @@ def histo_analysis_2(hist_data, delta, low_bound, high_bound):
 
         i = i + delta
 
-        if i >= high_bound:
+        if i > high_bound:
 
             break
 
