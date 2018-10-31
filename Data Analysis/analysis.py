@@ -40,7 +40,7 @@ class obstacles:
         c_pos.append(n_pos)
         c_perim.append(n_perim)
         c_effects(n_effect)
-        return True
+        return None
 
     def edit(self, search_id, n_name, n_id, n_pos, n_perim, n_effect):
         position = 0
@@ -56,7 +56,7 @@ class obstacles:
         c_pos[position] = n_pos
         c_perim[position] = n_perim
         c_effect[position] = n_effect
-        return True
+        return None
 
     def search(self, search):
         position = 0
@@ -89,7 +89,7 @@ class objectives:
         c_ids.append(n_id)
         c_pos.append(n_pos)
         c_effects(n_effect)
-        return True
+        return None
     
     def edit(self, search_id, n_name, n_id, n_pos, n_effect):
         position = 0
@@ -104,7 +104,7 @@ class objectives:
 
         c_pos[position] = n_pos
         c_effect[position] = n_effect
-        return True
+        return None
     
     def search(self, search):
         position = 0
