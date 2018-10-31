@@ -208,7 +208,7 @@ def stdev_z_split(mean, stdev, delta, low_bound, high_bound):
 def histo_analysis(hist_data): #note: depreciated
 
     if hist_data == 'debug':
-        return['lower estimate (5%)', 'lower middle estimate (25%)', 'middle estimate (50%)', 'higher middle estimate (75%)', 'high estimate (95%)', 'standard deviation']
+        return['lower estimate (5%)', 'lower middle estimate (25%)', 'middle estimate (50%)', 'higher middle estimate (75%)', 'high estimate (95%)', 'standard deviation', 'note: this has been depreciated']
     
     derivative = []
     for i in range(0, len(hist_data) - 1, 1):
