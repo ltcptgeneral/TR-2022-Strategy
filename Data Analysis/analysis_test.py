@@ -1,6 +1,6 @@
 import analysis
 
-data = analysis.load_csv('example.txt')
+data = analysis.load_csv('data.txt')
 print(analysis.basic_stats(0, 'debug', 0))
 print(analysis.basic_stats(data, 1, 0))
 print(analysis.basic_stats(data, 2, 0))
